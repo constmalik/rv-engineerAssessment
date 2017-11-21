@@ -5,20 +5,20 @@ webdriverio
     .remote(options)
     .init()
     .url('https://internet.frontier.com/').then(function () {
-
+        
         var isVisible = webdriverio
             .remote(options)
             .init()
             .url('https://internet.frontier.com/')
-            .isVisible('div.hero');
+            .isVisible('hero');
             console.log('hero', isVisible); // outputs:true
 
         isVisible = webdriverio
-            .remote(options).init().url('https://internet.frontier.com/').isVisible('div.graphic');
+            .remote(options).init().url('https://internet.frontier.com/').isVisible('.graphic');
         console.log('graphic', isVisible); // outputs:true
 
         isVisible = webdriverio
-            .remote(options).init().url('https://internet.frontier.com/').isVisible('section.section--bg');
+            .remote(options).init().url('https://internet.frontier.com/').isVisible('.section--bg');
         console.log('section', isVisible); // outputs:true
 
 
